@@ -1,4 +1,4 @@
-image: Ubuntu
+image: macOS
 
 stack: jdk 11
 
