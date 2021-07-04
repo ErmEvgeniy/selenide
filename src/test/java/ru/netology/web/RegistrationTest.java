@@ -1,6 +1,8 @@
 package ru.netology.web;
 
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,16 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RegistrationTest {
+
+    @BeforeEach
+    void openUrl() {
+        open("http://localhost:9999");
+    }
+
+    @AfterEach
+    void tearDown() {
+        closeWindow();
+    }
 
     @Test
     void correctRegistration() {
